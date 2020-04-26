@@ -9,13 +9,15 @@ RUN builddeps=' \
 		gcc \
 		' \
 	&& apk --no-cache --update add \
-	        ca-certificates \
-	        python3 \
-	        $builddeps \
-	        && pip3 install --upgrade pip setuptools \
-	        && pip3 install \
-		    ansible \
-		    six \
+			ca-certificates \
+			python3 \
+			openssh \
+			bash \
+			$builddeps \
+	&& pip3 install --upgrade \
+			pip \
+			setuptools \
+	&& pip3 install ansible \
 	&& apk del --purge $builddeps
 
 ENTRYPOINT [ "ansible" ]
