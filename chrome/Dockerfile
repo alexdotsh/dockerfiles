@@ -1,5 +1,4 @@
 FROM debian:sid-slim
-LABEL maintainer "Alex Mirkhaydarov <alex.mirkhaydarov@gmail.com"
 
 # Install Chrome
 RUN apt-get update && apt-get install -y \
