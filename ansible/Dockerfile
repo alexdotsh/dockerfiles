@@ -20,4 +20,4 @@ RUN builddeps=' \
 	&& pip3 install ansible \
 	&& apk del --purge $builddeps
 
-ENTRYPOINT [ "ansible" ]
+WORKDIR /playbooks
